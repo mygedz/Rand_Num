@@ -13,7 +13,7 @@ namespace RandNum
         {
             Random rand = new Random();
             int rndValue = 1 + rand.Next(interval); //генерируем случайно число и записываем его в переменную
-            return rndValue; //возвращаем рандомное значени
+            return rndValue; //возвращаем рандомное значение
         }
         static string Game(int attemp, int rndValue, int interval)
         {
@@ -48,7 +48,7 @@ namespace RandNum
             Console.WriteLine("Введите количество попыток: ");
             int attemp = Convert.ToInt32(Console.ReadLine()); //запись числа, которое будет количеством попыток в переменную
 
-            int rndValue = GenerationRandValue(interval); //записываем в перменную rndValue рандомное число, полученное из метода GenerationRandValue
+            int rndValue = GenerationRandValue(interval); //записываем в переменную rndValue рандомное число, полученное из метода GenerationRandValue
             Console.WriteLine(Game(attemp, rndValue, interval));
             Console.ReadKey();
         }
