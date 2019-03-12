@@ -12,10 +12,10 @@ namespace RandNum
         }
         static int AskUser(string message)
         {
+            //метод выводит сообщение и запрашивает число, проверяя его на валидность
             Console.WriteLine(message);
             while (true)
             {
-                //проверка на число/не число
                 if (int.TryParse(Console.ReadLine(), out int result))
                     return result;
 
@@ -35,8 +35,7 @@ namespace RandNum
                 numAttemp++; //счетчик попыток (с какой угадал)
                 attemp--; //счетчик попыток (сколько осталось)
 
-                Console.WriteLine($"Попытка {numAttemp}. Введите число: ");
-                int entNum = Convert.ToInt32(Console.ReadLine()); //запись в переменную числа, которое ввел пользователь
+                int entNum = AskUser($"Попытка {numAttemp}. Введите число: ");  //запись в переменную числа, которое ввел пользователь
 
                 if (entNum == 0 || entNum > interval || entNum < 0)
                 {
