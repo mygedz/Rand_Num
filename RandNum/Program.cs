@@ -39,7 +39,7 @@ namespace RandNum
 
                 if (entNum == 0 || entNum > interval || entNum < 0)
                 {
-                    return $"Будь внимтельнее! От 1 до {interval}.";
+                    return $"Будь внимательнее! От 1 до {interval}.";
                 }
                 if (entNum == rndValue)
                 {
